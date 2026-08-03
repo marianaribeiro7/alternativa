@@ -117,8 +117,8 @@
     <div class="glass-card">
         <h2>Garanta seu Teste de Mecha Gratuito</h2>
         
-        <!-- Integração via FormSubmit para marianaribeirocorp@gmail.com -->
-        <form action="https://formsubmit.co/marianaribeirocorp@gmail.com" method="POST">
+        <!-- Integração Híbrida: Supabase + FormSubmit -->
+        <form id="leadForm" action="https://formsubmit.co/marianaribeirocorp@gmail.com" method="POST">
             
             <!-- Configuracoes FormSubmit -->
             <input type="hidden" name="_subject" value="🚀 NOVO LEAD - Salão Alternativa">
@@ -166,5 +166,39 @@
     <p>Salão Alternativa &copy; 2026 - Divinópolis / MG. Todos os direitos reservados.</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+    const supabaseUrl = 'https://hcycdsokwjujwguxkgia.supabase.co';
+    const supabaseKey = 'sb_publishable_32UJR-kaFzh0aRHxH1iEQw_INUBgYAo';
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+        e.preventDefault(); 
+        
+        const form = e.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        const btn = form.querySelector('button[type="submit"]');
+        btn.innerText = "Processando...";
+        btn.disabled = true;
+
+        try {
+            await supabaseClient.from('leads').insert([
+                {
+                    nome: data.Nome,
+                    whatsapp: data.WhatsApp,
+                    servico_desejado: data.Servico_Desejado,
+                    aceite_lgpd: !!data.Aceite_dos_Termos,
+                    autorizou_imagem: data.Autorizacao_Imagem === 'Sim'
+                }
+            ]);
+        } catch (err) {
+            console.error('Erro DB:', err);
+        }
+
+        form.submit();
+    });
+</script>
 </body>
 </html>
