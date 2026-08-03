@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salão da Mariana em Divinópolis MG | Especialista em Cabelos Coloridos</title>
+    <meta name="description" content="Salão de beleza em Divinópolis MG especializado em colorimetria capilar e cores fantasia. Realce sua beleza com saúde e sem danos. Agende via WhatsApp!">
+    
+    <!-- Geo Tags SEO Local -->
+    <meta name="geo.region" content="BR-MG" />
+    <meta name="geo.placename" content="Divinópolis" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0D0B14;
+            --surface-color: #140F24;
+            --accent-magenta: #FF007A;
+            --accent-cyan: #00F0FF;
+            --text-main: #FFFFFF;
+            --text-muted: #E0E0E6;
+        }
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 { font-family: 'Syne', sans-serif; }
+        
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(20, 15, 36, 0.7);
+            backdrop-filter: blur(12px);
+            padding: 20px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .logo { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; color: var(--text-main); }
+        .logo span { color: var(--accent-magenta); text-shadow: 0 0 10px var(--accent-magenta); }
+        
+        .hero {
+            padding: 100px 5%; text-align: center;
+            background: radial-gradient(circle at top, #2a0b38 0%, #0D0B14 70%);
+        }
+        .badge {
+            display: inline-block; padding: 8px 16px; border-radius: 20px;
+            background: rgba(255, 0, 122, 0.1); border: 1px solid var(--accent-magenta);
+            color: var(--accent-magenta); font-size: 14px; font-weight: 600; margin-bottom: 20px;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
+        
+        .btn-neon {
+            background: linear-gradient(90deg, var(--accent-magenta), #7B2CBF);
+            color: white; border: none; padding: 18px 40px; font-size: 1.1rem;
+            border-radius: 30px; font-weight: 600; cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.4);
+            transition: all 0.3s ease; text-decoration: none; display: inline-block;
+        }
+        .btn-neon:hover {
+            box-shadow: 0 0 40px rgba(255, 0, 122, 0.7); transform: translateY(-2px);
+        }
+        
+        .form-section {
+            padding: 80px 5%; max-width: 600px; margin: -50px auto 100px auto;
+            position: relative; z-index: 10;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px; padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .glass-card h2 { margin-top: 0; font-size: 2rem; text-align: center; margin-bottom: 30px; }
+        
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.95rem; }
+        input, select {
+            width: 100%; padding: 15px; border-radius: 12px;
+            background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15);
+            color: white; font-family: inherit; font-size: 1rem; box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus { outline: none; border-color: var(--accent-cyan); box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
+        select option { background: var(--surface-color); color: white; }
+        
+        .checkbox-group { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 30px; }
+        .checkbox-group input { width: 18px; height: 18px; margin-top: 4px; accent-color: var(--accent-magenta); }
+        .checkbox-group label { font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+        .checkbox-group a { color: var(--accent-cyan); font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .checkbox-group a:hover { border-bottom: 1px solid var(--accent-cyan); }
+        
+        footer {
+            text-align: center; padding: 30px; border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted); font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Salão<span>Alternativa</span></div>
+</header>
+
+<section class="hero">
+    <div class="badge">✨ Colorimetria Avançada em Divinópolis/MG</div>
+    <h1>A cor perfeita para o seu estilo.<br>A saúde que o seu cabelo exige.</h1>
+    <p>Esqueça o medo de danificar os fios. A Mariana combina ciência da cor, visagismo e alta proteção para criar o tom dos seus sonhos sem cortes químicos.</p>
+    <a href="#agendar" class="btn-neon">Solicitar Avaliação VIP</a>
+</section>
+
+<section id="agendar" class="form-section">
+    <div class="glass-card">
+        <h2>Garanta seu Teste de Mecha Gratuito</h2>
+        
+        <!-- Integração via FormSubmit para marianaribeirocorp@gmail.com -->
+        <form action="https://formsubmit.co/marianaribeirocorp@gmail.com" method="POST">
+            
+            <!-- Configuracoes FormSubmit -->
+            <input type="hidden" name="_subject" value="🚀 NOVO LEAD - Salão Alternativa">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+            
+            <div class="form-group">
+                <label>Nome Completo</label>
+                <input type="text" name="Nome" required placeholder="Como podemos te chamar?">
+            </div>
+            
+            <div class="form-group">
+                <label>WhatsApp (Com DDD)</label>
+                <input type="tel" name="WhatsApp" required placeholder="(37) 99999-9999">
+            </div>
+            
+            <div class="form-group">
+                <label>Qual serviço você deseja?</label>
+                <select name="Servico_Desejado" required>
+                    <option value="" disabled selected>Escolha uma opção...</option>
+                    <option value="Colorimetria Fantasia / Colorido">Colorimetria / Cores Fantasia</option>
+                    <option value="Loiro Manteiga / Platinado Saudável">Loiro Saudável / Platinado</option>
+                    <option value="Morena Iluminada">Morena Iluminada</option>
+                    <option value="Correção de Cor / Tirar manchas">Correção de Cor / Tirar Manchas</option>
+                </select>
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="lgpd" name="Aceite_dos_Termos" required>
+                <label for="lgpd">Estou ciente e concordo com os <a href="termos_de_consentimento.html" target="_blank">Termos de Consentimento e Privacidade (LGPD)</a> para o envio dos meus dados.</label>
+            </div>
+            
+            <button type="submit" class="btn-neon" style="width: 100%; border-radius: 12px;">Enviar Dados para Mariana</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>Salão Alternativa &copy; 2026 - Divinópolis / MG. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
